@@ -25,9 +25,10 @@ export const HeaderTitle = styled.Text`
   color: #161518;
 `
 export const SubHeaderTitle = styled.Text`
-   font-size: 14px;
+   font-size: 16px;
    font-family: Aeonik-regular;
    color: #82808F;
+   line-height: 20px;
 `
 export const FormWrap = styled.ScrollView`
    display: flex;
@@ -167,7 +168,7 @@ export default function Login() {
               </Checkbox>
               <Label>Remember me</Label>
             </CheckboxContainer>
-            <WrapPassword>
+            <WrapPassword onPress={() => router.push('/auth/forgot-password')}>
               <TxtForgotPassword>Forgot Password?</TxtForgotPassword>
               <UnderLineForgotPassword />
             </WrapPassword>
