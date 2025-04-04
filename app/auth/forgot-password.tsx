@@ -5,23 +5,27 @@ import { BackButton, BackButtonIcon, HeaderTxtWrap, HeaderTitle, SubHeaderTitle,
 import styled from "styled-components/native";
 import { Input } from "@/components/input";
 import OTPTextInput from 'react-native-otp-textinput';
+import { KeyboardAvoidingViewWrapper, BottomButtonWrapper } from "./sign-up-number";
+import { Platform } from "react-native";
 
 const EmailTxt = styled.Text`
   font-size: 16px;
   color: #161518;
   font-family: Aeonik-regular;
 `
-const OTPTextInputWrap = styled.View`
+export const OTPTextInputWrap = styled.View`
   margin-bottom: 10px;
 `
 
 export default function ForgotPassword() {
   const router = useRouter();
   const otpInputRef = useRef<any>(null);  
-  const [step, setStep] = useState(2);
+  const [step, setStep] = useState(1);
   return (
     <MainWrap>
       <Container>
+        <KeyboardAvoidingViewWrapper
+            behavior={Platform.OS === "ios" ? "padding" : "height"}>
         <BackButton onPress={() => router.back()}>
             <BackButtonIcon source={require('./../../assets/images/back-button.png')} />
         </BackButton>
@@ -33,10 +37,12 @@ export default function ForgotPassword() {
                 </HeaderTxtWrap>
                 <FormWrap>
                     <Input placeholder="helenasharapova@mail.com" />
-                    <StyledButton>
+                </FormWrap>
+                <BottomButtonWrapper>
+                    <StyledButton onPress={() => router.push('/auth/success')}>
                         <ButtonText>Send reset code</ButtonText>
                     </StyledButton>
-                </FormWrap>
+                </BottomButtonWrapper>
             </>
         )}
         {step === 2 && (
@@ -66,10 +72,12 @@ export default function ForgotPassword() {
                         }}
                     />
                 </OTPTextInputWrap>
+            </FormWrap>
+            <BottomButtonWrapper>
                 <StyledButton>
                     <ButtonText>Verify</ButtonText>
                 </StyledButton>
-            </FormWrap>
+            </BottomButtonWrapper>
             </>
         )}
         {step === 3 &&(
@@ -81,12 +89,15 @@ export default function ForgotPassword() {
             <FormWrap>
                 <Input placeholder="Password" secureTextEntry />
                 <Input placeholder="Confirm Password" secureTextEntry />
+            </FormWrap>
+            <BottomButtonWrapper>
                 <StyledButton>
                     <ButtonText>Create New Password</ButtonText>
                 </StyledButton>
-            </FormWrap>
+            </BottomButtonWrapper>
             </>
         )}
+        </KeyboardAvoidingViewWrapper>
       </Container>
     </MainWrap>
   )

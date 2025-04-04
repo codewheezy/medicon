@@ -32,6 +32,7 @@ export const SubHeaderTitle = styled.Text`
 `
 export const FormWrap = styled.ScrollView`
    display: flex;
+   flex: 1;
    flex-direction: column;
    margin-top: 7%;
 `
