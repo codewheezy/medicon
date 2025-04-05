@@ -1,7 +1,7 @@
 import React, {useState, useRef} from 'react'
 import styled from "styled-components/native";
 import { useRouter } from "expo-router";
-import { MainWrap, Container, StyledButton, ButtonText } from "../index";
+import { MainWrap, Container, StyledButton, ButtonText } from "../(auth)/intro";
 import { 
     BackButton, 
     BackButtonIcon, 
@@ -194,7 +194,7 @@ export default function SignUpNumber() {
         </PhoneInputWrapper>
         </FormWrap>
         <BottomButtonWrapper>
-          <StyledButton onPress={() => router.push('/auth/verification-code')}>
+          <StyledButton onPress={() => router.push('/(auth)/verification-code')}>
             <ButtonText>Continue</ButtonText>
           </StyledButton>
         </BottomButtonWrapper>

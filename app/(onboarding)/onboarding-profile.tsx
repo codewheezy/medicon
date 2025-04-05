@@ -1,5 +1,5 @@
 import { View, Text } from 'react-native'
-import { MainWrap, Container, StyledButton, ButtonText } from ".."
+import { MainWrap, Container, StyledButton, ButtonText } from "../(auth)/intro"
 import React from 'react'
 import styled from "styled-components/native"
 

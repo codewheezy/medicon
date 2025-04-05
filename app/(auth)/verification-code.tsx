@@ -1,5 +1,5 @@
 import React, {useRef, useState} from 'react';
-import { MainWrap, Container, StyledButton, ButtonText } from "../index";
+import { MainWrap, Container, StyledButton, ButtonText } from "../(auth)/intro";
 import { BackButton, BackButtonIcon, HeaderTxtWrap, HeaderTitle, SubHeaderTitle, FormWrap } from "./login";
 import styled from "styled-components/native";
 import OTPTextInput from 'react-native-otp-textinput';

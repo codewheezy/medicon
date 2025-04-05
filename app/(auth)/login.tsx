@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { MainWrap, Container, StyledButton, ButtonText } from "./../index";
+import { MainWrap, Container, StyledButton, ButtonText } from "../(auth)/intro";
 import { useRouter } from "expo-router";
 import styled from "styled-components/native";
 import { Input } from "@/components/input";
@@ -169,12 +169,12 @@ export default function Login() {
               </Checkbox>
               <Label>Remember me</Label>
             </CheckboxContainer>
-            <WrapPassword onPress={() => router.push('/auth/forgot-password')}>
+            <WrapPassword onPress={() => router.push('/(auth)/forgot-password')}>
               <TxtForgotPassword>Forgot Password?</TxtForgotPassword>
               <UnderLineForgotPassword />
             </WrapPassword>
           </FrogetPasswordWrap>
-          <StyledButton onPress={() => router.push('/auth/sign-up-number')}>
+          <StyledButton onPress={() => router.push('/(auth)/sign-up-number')}>
             <ButtonText>Sign in</ButtonText>
           </StyledButton>
           <SignWithOtherAcc>
@@ -197,7 +197,7 @@ export default function Login() {
               <IDonthaveAccTxt>Don't have an account?</IDonthaveAccTxt>
               <IDonthaveAccBorder />
             </IDonthaveAccInnerWrap>
-            <CreateAccTxtBtn onPress={() => router.push('/auth/create-account')}>
+            <CreateAccTxtBtn onPress={() => router.push('/(auth)/create-account')}>
               <CreateAccTxt>Create account</CreateAccTxt>
             </CreateAccTxtBtn>
           </IDonthaveAccWrap>

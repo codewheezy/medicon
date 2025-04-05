@@ -1,6 +1,6 @@
 import React, {useRef, useState} from 'react'
 import { useRouter } from "expo-router";
-import { MainWrap, Container, StyledButton, ButtonText } from "../index";
+import { MainWrap, Container, StyledButton, ButtonText } from "../(auth)/intro";
 import { BackButton, BackButtonIcon, HeaderTxtWrap, HeaderTitle, SubHeaderTitle, FormWrap } from "./login";
 import styled from "styled-components/native";
 import { Input } from "@/components/input";
@@ -39,7 +39,7 @@ export default function ForgotPassword() {
                     <Input placeholder="helenasharapova@mail.com" />
                 </FormWrap>
                 <BottomButtonWrapper>
-                    <StyledButton onPress={() => router.push('/auth/success')}>
+                    <StyledButton onPress={() => router.push('/(auth)/success')}>
                         <ButtonText>Send reset code</ButtonText>
                     </StyledButton>
                 </BottomButtonWrapper>

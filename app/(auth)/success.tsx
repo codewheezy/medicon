@@ -7,7 +7,7 @@ import {
     CancelIcon,
     MainContentWrap
  } from "./password-update";
-import {MainWrap, Container, StyledButton, ButtonText} from '../index'
+import {MainWrap, Container, StyledButton, ButtonText} from '../(auth)/intro'
 import styled from "styled-components/native";
 import { useRouter } from "expo-router";
 

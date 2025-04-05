@@ -1,4 +1,4 @@
-import { MainWrap, Container, StyledButton, ButtonText } from "../index";
+import { MainWrap, Container, StyledButton, ButtonText } from "../(auth)/intro";
 import React from 'react';
 import styled from "styled-components/native";
 import { useRouter } from "expo-router";
@@ -41,7 +41,7 @@ export default function PasswordUpdate() {
             <IllustrationImage source={require('./../../assets/images/password-update-Illustration.png')} />
             <IllustrationTitle>Password Updated!</IllustrationTitle>
             <IllustrationSubTitle>Your password has been set up successfully.</IllustrationSubTitle>
-            <StyledButton onPress={() => router.push('/auth/login')}>
+            <StyledButton onPress={() => router.push('/(auth)/login')}>
                 <ButtonText>Proceed to Sign in</ButtonText>
             </StyledButton>
         </MainContentWrap>

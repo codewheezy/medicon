@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { MainWrap, Container, StyledButton, ButtonText } from "../index";
+import { MainWrap, Container, StyledButton, ButtonText } from "../(auth)/intro";
 import { BackButton, 
   BackButtonIcon, 
   HeaderTxtWrap, 
@@ -92,10 +92,10 @@ export default function createAccount() {
             <TermsTxtWrap>
               <RegularText>By creating an account, you agree to our?</RegularText>
               <TermsInnerTxtWrap>
-                <Button onPress={() =>router.push('/auth/term-service')}>
+                <Button onPress={() =>router.push('/(auth)/term-service')}>
                   <LinkText right>User Agreement and</LinkText>
                 </Button><RegularText>Terms</RegularText>
-                <Button onPress={() =>router.push('/auth/term-service')}>
+                <Button onPress={() =>router.push('/(auth)/term-service')}>
                   <LinkText left>& Conditions</LinkText>
                 </Button>
               </TermsInnerTxtWrap>
@@ -109,7 +109,7 @@ export default function createAccount() {
               <IDonthaveAccTxt>Already have an account?</IDonthaveAccTxt>
               <IDonthaveAccBorder />
             </IDonthaveAccInnerWrap>
-            <CreateAccTxtBtn onPress={() => router.push('/auth/login')}>
+            <CreateAccTxtBtn onPress={() => router.push('/(auth)/login')}>
               <CreateAccTxt>Sign in</CreateAccTxt>
             </CreateAccTxtBtn>
           </StyledIDonthaveAccWrap>

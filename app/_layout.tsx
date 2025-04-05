@@ -2,7 +2,7 @@ import { Stack } from "expo-router";
 import { useFonts } from 'expo-font';
 
 export default function RootLayout() {
-  useFonts({
+  const [fontsLoaded] = useFonts({
     'Nohemi-Black': require('./../assets/fonts/Nohemi-Black-BF6438cc58744d4.ttf'),
     'Nohemi-Bold': require('./../assets/fonts/Nohemi-Bold-BF6438cc587b5b5.ttf'),
     'Nohemi-ExtraBold': require('./../assets/fonts/Nohemi-ExtraBold-BF6438cc5881baf.ttf'),
@@ -15,12 +15,13 @@ export default function RootLayout() {
     'Aeonik-bold': require('./../assets/fonts/AeonikTRIAL-Bold.otf'),
     'Aeonik-regular': require('./../assets/fonts/AeonikTRIAL-Regular.otf'),
     'Aeonik-light': require('./../assets/fonts/AeonikTRIAL-Light.otf')
-  })
-  return(
-    <Stack screenOptions={{
-      headerShown: false
-    }}>
+  });
 
+  if(!fontsLoaded) return null;
+
+  return(
+    <Stack screenOptions={{headerShown: false }}>
+      <Stack.Screen name="(tabs)" />
     </Stack>
   );
 }

@@ -1,4 +1,4 @@
-import { MainWrap, Container, StyledButton, ButtonText } from "../index";
+import { MainWrap, Container, StyledButton, ButtonText } from "../(auth)/intro";
 import { 
   BackButton, 
   BackButtonIcon, 
